@@ -4,9 +4,20 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+
+import { reducer } from './Reducers/reducer';
+import thunk from 'redux-thunk';
+
+//Store is created by passing reducer and applyMiddleware function as arguments to the createStore function
+const store = createStore(reducer, applyMiddleware(thunk));
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
