@@ -10,11 +10,14 @@ const Character = (props) => {
     return (
         <div>
             <button onClick={() => props.getCharacter()}>Get Random Character</button>
-            <div>
+            <div className='profile'>
+                <div className='profileImage'>
+                    <img src={`${props.character.image}`} alt={`${props.character.name}`} />
+                </div>
                 <h3>{props.character.name}</h3>
-                <p>{`Species: ${props.character.species}`}</p>
-                <p>{`Origin: ${props.character.origin.name}`}</p>
-                <p>{`Dead / Alive: ${props.character.status}`}</p>
+                <p><span>Species:</span> {props.character.species}</p>
+                <p><span>Origin:</span> {props.character.origin.name}</p>
+                <p><span>Dead / Alive:</span>{props.character.status}</p>
             </div>
         </div>
     )

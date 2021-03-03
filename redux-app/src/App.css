@@ -9,3 +9,19 @@ button {
   border-radius: 5px;
   padding: 5px;
 }
+
+span {
+  color: orchid;
+  font-weight: bold;
+}
+
+.profile {
+  margin: 0 auto;
+  max-width: 500px;
+  padding-top: 25px;
+}
+
+.profileImage {
+  max-width: 100%;
+  height: auto;
+}
